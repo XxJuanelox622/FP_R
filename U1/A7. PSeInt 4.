@@ -1,0 +1,40 @@
+Un banco necesita realizar un sistema de evaluación preliminar para otorgar un crédito, a fin de mejorar el tiempo de validación y que los potenciales clientes puedan saber de manera más rápido a quiénes se les pudiera otorgar un crédito.
+
+De acuerdo a la última reunión innecesaria, a las 6:00 p.m. un día sábado, se presentaron las siguientes condicionales.
+
+El prospecto debe tener al menos 21 años de edad, debe tener un ingreso de al menos 8,500 mensuales, debe tener al menos 5 años de historial crediticio y dicho historial crediticio deberá ser positivo, es decir, que siempre han pagado a tiempo, finalmente, el monto del crédito deberá ser de al menos $10,000.
+
+Después de una discusión acalorada donde la Lic. Petra comenzó a llorar defendiendo a la gente de bajos recursos, se llegó al siguiente acuerdo, fue horrible, la reunión terminó a las 9:00 p.m., pero al final, todos abrazaron a la Lic. Petra y oraron por ella, hubo galletas y café para todos. Se llegaron a los siguientes acuerdos.
+
+El prospecto deberá tener al menos 18 años de edad, con un ingreso de al menos $4,000 al mes, deberá tener al menos 2 años trabajando, ya no se revisará su historial crediticio y se estableció a que el préstamo máximo sería de máximo un 15% del salario mensual del prospecto multiplicado por 12 mensualidades. Adicionalmente, si el prospecto tiene al menos $10,000 de saldo en su cuenta de banco o si el préstamo es para una cuestión médica, su crédito será aprobado automáticamente.
+
+El reporte deberá mostrar la edad del prospecto, su ingreso mensual, de cuánto sería el monto máximo del préstamo y su crédito será aprobado o no.
+
+Algoritmo Banco
+	Escribir "Cual es tu edad :"
+    Leer edad
+    Escribir "cuales son ingros mensual :"
+    Leer ingreso
+    Escribir " cual es tu saldo en tu cuenta :"
+	leer saldo
+	Escribir "cuantos años de historial credeticio tiene "
+	leer años_his
+	Escribir "¿Es para situacion medica ? (1 = Sí, 0 = No):"
+    Leer md
+	//Proceso 
+    ED = edad > 18   
+    MT= ingreso >= 4000
+	sl = saldo >= 10000
+	at = años_his >= 2
+	md = medica = 1
+    Escribir " su edad es  " edad
+    Escribir "su ingreso es " ingreso
+    Escribir " su saldo en su cuenta es " saldo
+    escribir " su monto  maximo del prestamo  es " ingreso * .15 *12 
+	Escribir " los años trabajados son  " años_hist
+    
+    // Evaluación de descuento
+    PRESTRAMO_ACEPTADO <- (ED)y (at)o (MT) o (SL) o (md)
+    
+    Escribir , " su  prestamo fue  ", PRESTRAMO_ACEPTADO 
+FinAlgoritmo
