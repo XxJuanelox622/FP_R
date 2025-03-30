@@ -9,7 +9,7 @@ Cuatrimestre: 1
 
 Universidad: Universida politecnica del estado de nayarit
 
-Descripción breve de la materia: Esta materia fue muy interesante ya el profesor explicaba muy bien los temas  compartidos en cada unidad.
+Descripción breve de la materia: Esta materia fue muy interesante ya que  el profesor explicaba muy bien los temas  compartidos en cada unidad.
 
 Unidad 1
 
@@ -31,5 +31,5 @@ Descripción breve de la unidad: En esta unidad aprendi algo nuevo que son los s
 
 Ir a Unidad 3: https://github.com/XxJuanelox622/FP_R/tree/51264107e146f9b51487a08674df1e687a6006d9/U3
 
-Comentarios personales sobre la materia y propuestas de mejoras: Ninguno 
+Comentarios personales sobre la materia y propuestas de mejoras: Ninguna 
 
