@@ -1,0 +1,93 @@
+Diseña un algoritmo que emplee subprogramas / funciones / subprocesos, para calcular el área y volumen de 3 figuras geométricas diferentes. 
+
+El usuario debe poder elegir cuál figura desea calcular y mostrar sus resultados, el programa debe poder repetirse si el usuario lo desea y elegir otra opción.
+
+SubProceso areaYvolumen (ele_f)
+	Escribir " Cual figura desea obtener su AREA Y VOLUMEN (1) para CUBO , (2) para CILINDRO , (3)  para ESFERA "
+	leer ele_f
+	Si ele_f  = 1 Entonces
+		//area
+		Escribir  " USTED A ELEGIDO SACAR EL AREA Y VOLUMEN DEL CUBO."
+		Escribir "Ingrese el lado de la cara del cubo"
+		Leer Lado_C
+		areaC= 6 * Lado_C ^ 2
+		Escribir"EL AREA DE SU CUBO ", " " "ES : "," ",areaC
+		
+		//Volumen
+		Escribir  " VOLUMEN DEL CUBO."
+		VolC= Lado_C * Lado_C * Lado_C
+		Escribir"EL VOLUMEN DEL CUBO ", " " "ES : "," ",volC
+	SiNo
+		Si ele_f = 2 Entonces
+			//area
+			Escribir  " USTED A ELEGIDO SACAR EL AREA Y VOLUMEN DEL CILINDRO."
+			Escribir "Ingrese el radio de la base del Cilindro"
+			Leer radio_C
+			Escribir "Ingrese la altura de el cilindro"
+			Leer h_C
+			area_CI= 2 * radio_C ^ 2 + 2 * radio_C * h_C 
+			Escribir"EL AREA DE SU CILINDRO ", " " "ES : "," ",area_CI * 3.1416
+			//volumen
+			vol_CI= 3.1416 * radio_C ^ 2 * h_C 
+			Escribir"EL VOLUMEN DE SU CILINDRO ", " " "ES : "," ",vol_CI 
+		SiNo
+			si ele_f = 3 Entonces
+				Escribir  " USTED A ELEGIDO SACAR EL AREA Y VOLUMEN DE UNA ESFERA."
+				Escribir "Ingrese el radio de la esfera"
+				Leer radio_E
+				area_E= 4 * 3.1416 * radio_E ^ 2
+				Escribir"EL AREA DE LA ESFERA  ", " " "ES : "," ",area_E
+				vol_E= 4 / 3 * 3.1416 * radio_E ^ 3
+				Escribir"EL VOLUMEN DE LA ESFERA  ", " " "ES : "," ",vol_E
+			FinSi
+		fin si
+	FinSi
+	Escribir " QUIERE REPETIR EL PROGRAMA (1) PARA SI , Y (0) PARA NO"
+	Leer REP_
+	Mientras REP_ = 1 Hacer
+			Escribir " Cual figura desea obtener su AREA Y VOLUMEN (1) para CUBO , (2) para CILINDRO , (3)  para ESFERA "
+			leer ele_f
+			Si ele_f  = 1 Entonces
+				//area
+				Escribir  " USTED A ELEGIDO SACAR EL AREA Y VOLUMEN DEL CUBO."
+				Escribir "Ingrese el lado de la cara del cubo"
+				Leer Lado_C
+				areaC= 6 * Lado_C ^ 2
+				Escribir"EL AREA DE SU CUBO ", " " "ES : "," ",areaC
+				
+				//Volumen
+				Escribir  " VOLUMEN DEL CUBO."
+				VolC= Lado_C * Lado_C * Lado_C
+				Escribir"EL VOLUMEN DEL CUBO ", " " "ES : "," ",volC
+			SiNo
+				Si ele_f = 2 Entonces
+					//area
+					Escribir  " USTED A ELEGIDO SACAR EL AREA Y VOLUMEN DEL CILINDRO."
+					Escribir "Ingrese el radio de la base del Cilindro"
+					Leer radio_C
+					Escribir "Ingrese la altura de el cilindro"
+					Leer h_C
+					area_CI= 2 * radio_C ^ 2 + 2 * radio_C * h_C 
+					Escribir"EL AREA DE SU CILINDRO ", " " "ES : "," ",area_CI * 3.1416
+					//volumen
+					vol_CI= 3.1416 * radio_C ^ 2 * h_C 
+					Escribir"EL VOLUMEN DE SU CILINDRO ", " " "ES : "," ",vol_CI 
+				SiNo
+					si ele_f = 3 Entonces
+						Escribir  " USTED A ELEGIDO SACAR EL AREA Y VOLUMEN DE UNA ESFERA."
+						Escribir "Ingrese el radio de la esfera"
+						Leer radio_E
+						area_E= 4 * 3.1416 * radio_E ^ 2
+						Escribir"EL AREA DE LA ESFERA  ", " " "ES : "," ",area_E
+						vol_E= 4 / 3 * 3.1416 * radio_E ^ 3
+						Escribir"EL VOLUMEN DE LA ESFERA  ", " " "ES : "," ",vol_E
+					FinSi
+				fin si
+			FinSi
+			Fin mientras
+FinSubProceso
+
+
+Algoritmo Area
+	areaYvolumen(ele_f)
+FinAlgoritmo
