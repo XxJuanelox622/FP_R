@@ -1,0 +1,21 @@
+Un programador tiene problemas para definir si un valor es mayor que otro cuando ingresa 2 números,
+seguramente no ha leído la documentación, pero para ayudarlo, necesita un programa que al ingresar 2 números,
+imprima siempre primero el más alto y luego el más bajo.
+
+Si el programador ingresa 11 y 150, la salida deberá mostrar 150 y luego 11.
+Los números podrán ser ingresados en cualquier orden y siempre deberán indicar cuál es el mayor y cuál es el menor.
+
+
+Algoritmo Numero_mayor
+	Escribir"ingrese el numero 1   :"
+	leer n_1
+	Escribir"ingrese el numero 2  :"
+	leer n_2
+	si  n_1 > n_2 Entonces
+		Escribir  "el nuemro mayor es"," ",":"," ",n_1
+		Escribir  "el nuemro menor es"," ",":"," ",n_2
+	SiNo
+		Escribir  "el numero mayor es "," ",":"," ",n_2
+		Escribir  "el nuemro menor es"," ",":"," ",n_2
+	FinSi
+FinAlgoritmo
