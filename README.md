@@ -3,7 +3,7 @@ Materia: Funamentos de Programacion
 
 Nombre completo: Ibarra Nuñez Juan Carlos
 
-Carrera: Ingenieria en tecnologias de La informacion e inovacion digital
+Carrera: Ingenieria en tecnologias de la informacion e inovacion digital
 
 Cuatrimestre: 1
 
