@@ -1,0 +1,37 @@
+Realiza un codigo en pseInt que  Diga la Cuenta Regresiva Para Navidaddo.
+
+Algoritmo cuenta_regresiva_navidad
+    Escribir "Ingresa el mes actual (numero del 1 al 12):"
+    Leer mes_actual
+    Escribir "Ingresa el día actual:"
+    Leer dia_actual
+    Escribir "Ingresa la hora actual (en formato 24 horas):"
+    Leer hora_actual
+    Escribir "Ingresa los minutos actuales:"
+    Leer minutos_actuales
+    
+    // Fecha y hora de Navidad (25 de diciembre a las 00:00)
+    dia_navidad <- 25
+    mes_navidad <- 12
+    hora_navidad <- 0
+    minutos_navidad <- 0
+    
+    // Calcular los días restantes hasta Navidad
+    dias_restantes <- (mes_navidad - mes_actual) * 30 + (dia_navidad - dia_actual)
+    horas_restantes <- dias_restantes * 24 - hora_actual
+    minutos_restantes <- horas_restantes * 60 - minutos_actuales
+    segundos_restantes <- minutos_restantes * 60
+    
+    // Calcular meses, semanas, días, horas, minutos y segundos restantes
+    meses_restantes <- dias_restantes / 30
+    semanas_restantes <- dias_restantes / 7
+    
+    // Mostrar resultados
+    Escribir "Faltan ", meses_restantes, " meses"
+    Escribir "Faltan ", semanas_restantes, " semanas"
+    Escribir "Faltan ", dias_restantes, " días"
+    Escribir "Faltan ", horas_restantes, " horas"
+    Escribir "Faltan ", minutos_restantes, " minutos"
+    Escribir "Faltan ", segundos_restantes, " segundos"
+    
+FinAlgoritmo
