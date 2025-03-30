@@ -1,0 +1,89 @@
+La abarrotera "Kamarena" necesita trabajar en un sistema que le ayude a registrar de manera fácil y rápida todos sus pedidos, hubo una explosión en el mercado al otro lado de la ciudad y ellos han quedado como el único lugar disponible para comprar, esa idea de poner una bomba ha salido terriblemente bien (no hubo ningún herido).
+
+Mientras el dueño sigue luchando entre entregarse a las autoridades por lo sucedido y pedir perdón a las familias involucradas, ha pedido a su asesor externo, el "Teclas" que le ayude con un sistema.
+
+Para ingresar al sistema debe pedir una contraseña (Mientras), que debe ser una fecha de nacimiento en formato YYYY-MM-DD, una vez en el sistema, debe preguntar si (Si) quiere hacer registros de zanahorias o de tomates.
+
+Si elige zanahorias, deberá pedir que se ingresen cuántas cajas deberá ingresar (Para), como cada caja tiene un valor diferente, habrá que ingresarlo manualmente una por una.
+
+Si elige tomates, deberá ingresar cuantas cajas se necesiten y cuando escriba el número 100001 deberá terminar de registrar (Mientras).
+
+En ambos casos, deberá qué opción se eligió y mostrar cuántas cajas se añadieron, cuánto fue el total del peso y cuánto fue el costo total de esa venta, las zanahorias cuestan $15.84 el kilo y los tomates cuestan $11.34 el kilo, si (Si) la venta supera los $10,000, se le hará un descuento automático del 7.5% del valor total.
+
+Finalmente, deberá preguntar si (Si) el cliente necesita o no envío, si requiere envío deberá añadir $150 más a su pedido, de lo contrario, mostrará el precio anterior.
+
+Algoritmo  Kamarena
+    Escribir "Introduce la contraseña:"
+    Leer contraseña
+	
+    Mientras contraseña <> "2025-03-11" Hacer
+        Escribir "Contraseña incorrecta. Inténtalo de nuevo:"
+        Leer contraseña
+    FinMientras
+	
+    Escribir "Acceso concedido."
+	
+    Escribir "¿Quiere hacer registros de zanahorias o de tomates? (1 = Zanahorias, 0 = Tomates):" 
+    Leer Reg_istro
+	
+    total_caj_val = 0
+    caja_agre = 0
+	
+    Si Reg_istro = 1 Entonces
+        Escribir "¡Ha elegido zanahorias!"
+        Escribir "¿Cuántas cajas deberá ingresar?:"
+        Leer n
+		
+        Para i = 1 Hasta n Hacer
+            Escribir "Ingrese el valor de la caja de zanahorias ", i, ":"
+            Leer caj_val
+            total_caj_val = total_caj_val + caj_val
+        FinPara
+		
+        caja_agre = n
+    SiNo
+        Escribir "¡Ha elegido tomates!"
+        Escribir "Ingrese la cantidad de cajas (100001 para terminar):"
+        
+        Leer caj_val
+        Mientras caj_val <> 100001 Hacer
+            total_caj_val = total_caj_val + caj_val
+            caja_agre = caja_agre + 1
+            Escribir "Ingrese el valor de la siguiente caja (100001 para terminar):"
+            Leer caj_val
+        FinMientras
+    FinSi
+	
+    Escribir "RESUMEN DE PEDIDO"
+    Si Reg_istro = 1 Entonces
+        Escribir "¡Ha elegido zanahorias!"
+    SiNo
+        Escribir "¡Ha elegido tomates!"
+    FinSi
+	
+    Escribir "Cajas añadidas:", caja_agre
+    Escribir "Peso total de cajas:", caja_agre * 5, "kg"
+	
+    Si Reg_istro = 1 Entonces
+        cos_tot1 = total_caj_val * 15.84
+    SiNo
+        cos_tot1 = total_caj_val * 11.34
+    FinSi
+	
+    Si cos_tot1 > 10000 Entonces
+        Escribir "Se le hará un descuento automático del 7.5%:"
+        cos_tot1 = cos_tot1 * 0.075
+    FinSi
+	
+    Escribir "El costo total de esta venta fue:", cos_tot1
+	
+    Escribir "¿Necesita que se envíe su pedido? (1 = Sí, 0 = No)"
+    Leer env_ped
+	
+    Si env_ped = 1 Entonces
+        cos_env = cos_tot1 + 150 
+        Escribir "El total del pedido con envío es:", cos_env
+    SiNo 
+        Escribir "Su costo es:", cos_tot1
+    FinSi	
+FinAlgoritmo
