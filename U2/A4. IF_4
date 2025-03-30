@@ -1,0 +1,185 @@
+El programador sigue teniendo complicaciones para ajustar su código cuando ingresan valores, pero necesita ayuda, ahora su jefe, que no conoce mucho de programación, quiere un programa para calcular los rendimientos de 4 vendedores y ver la diferencia entre estos.
+
+El programa debe recibir los 4 valores de los vendedores, que se calcula en ventas por mes, después, el programa debe ordenarlos de menor a mayor, siendo 4 el mayor y 1 el menor, una vez hecho esto debe hacer las siguientes operaciones.
+
+Mostrar los números ordenados
+El resultado del 4 menos el 1
+El resultado del 2 menos el 1
+El resultado del 4 menos el 3
+El resultado del 3 menos el 2
+La suma de todas las ventas y el promedio general
+
+
+Algoritmo Valores_de_venta
+	Definir val_tot Como Real
+	Escribir"ingrese el valor de ventas por mes del vendedor 1"
+	leer val_1
+	Escribir"ingrese el valor de ventas por mes del vendedor 2"
+	leer val_2
+	Escribir"ingrese el valor de ventas por mes  del vendedor 3"
+	leer val_3
+	Escribir"ingrese el valor de ventas por mes del vendedor 4"
+	leer val_4
+	Si val_1 > val_2 Y val_1 > val_3 Y val_1 > val_4 Entonces
+        p1 = val_1
+        Si val_2 > val_3 Y val_2 > val_4 Entonces
+            p2 = val_2
+            Si val_3 > val_4 Entonces
+                p3 = val_3
+                p4 = val_4
+            Sino
+                p3 = val_4
+                p4 = val_3
+            FinSi
+        Sino
+            Si val_3 > val_2 Y val_3 > val_4 Entonces
+                p2 = val_3
+                Si val_2 > val_4 Entonces
+                    p3 = val_2
+                    p4 = val_4
+                Sino
+                    p3 = val_4
+                    p4 = val_2
+                FinSi
+            Sino
+                p2 = val_4
+                Si val_2 > val_3 Entonces
+                    p3 = val_2
+                    p4 = val_3
+                Sino
+                    p3 = val_3
+                    p4 = val_2
+                FinSi
+            FinSi
+        FinSi
+    Sino
+        Si val_2 > val_1 Y val_2 > val_3 Y val_2 > val_4 Entonces
+            p1 = val_2
+            Si val_1 > val_3 Y val_1 > val_4 Entonces
+                p2 = val_1
+                Si val_3 > val_4 Entonces
+                    p3 = val_3
+                    p4 = val_4
+                Sino
+                    p3 = val_4
+                    p4 = val_3
+                FinSi
+            Sino
+                Si val_3 > val_1 Y val_3 > val_4 Entonces
+                    p2 = val_3
+                    Si val_1 > val_4 Entonces
+                        p3 = val_1
+                        p4 = val_4
+                    Sino
+                        p3 = val_4
+                        p4 = val_1
+                    FinSi
+                Sino
+                    p2 = val_4
+                    Si val_1 > val_3 Entonces
+                        p3 = val_1
+                        p4 = val_3
+                    Sino
+                        p3 = val_3
+                        p4 = val_1
+                    FinSi
+                FinSi
+            FinSi
+        Sino
+            Si val_3 > val_1 Y val_3 > val_2 Y val_3 > val_4 Entonces
+                p1 = val_3
+                Si val_1 > val_2 Y val_1 > val_4 Entonces
+                    p2 = val_1
+                    Si val_2 > val_4 Entonces
+                        p3 = val_2
+                        p4 = val_4
+                    Sino
+                        p3 = val_4
+                        p4 = val_2
+                    FinSi
+                Sino
+                    Si val_2 > val_1 Y val_2 > val_4 Entonces
+                        p2 = val_2
+                        Si val_1 > val_4 Entonces
+                            p3 = val_1
+                            p4 = val_4
+                        Sino
+                            p3 = val_4
+                            p4 = val_1
+                        FinSi
+                    Sino
+                        p2 = val_4
+                        Si val_1 > val_2 Entonces
+                            p3 = val_1
+                            p4 = val_2
+                        Sino
+                            p3 = val_2
+                            p4 = val_1
+                        FinSi
+                    FinSi
+                FinSi
+            Sino
+                p1 = val_4
+                Si val_1 > val_2 Y val_1 > val_3 Entonces
+                    p2 = val_1
+                    Si val_2 > val_3 Entonces
+                        p3 = val_2
+                        p4 = val_3
+                    Sino
+                        p3 = val_3
+                        p4 = val_2
+                    FinSi
+                Sino
+                    Si val_2 > val_1 Y val_2 > val_3 Entonces
+                        p2 = val_2
+                        Si val_1 > val_3 Entonces
+                            p3 = val_1
+                            p4 = val_3
+                        Sino
+                            p3 = val_3
+                            p4 = val_1
+                        FinSi
+                    Sino
+                        p2 = val_3
+                        Si val_1 > val_2 Entonces
+                            p3 = val_1
+                            p4 = val_2
+                        Sino
+                            p3 = val_2
+                            p4 = val_1
+                        FinSi
+                    FinSi
+                FinSi
+            FinSi
+        FinSi
+    FinSi
+	
+    Escribir "Valores ordenados de mayor a menor:"
+	Mostrar "1 :",p1
+	Mostrar "2 :",p2
+	Mostrar "3 :",p3
+	Mostrar "4 :",p4
+	si  val_4 <> val_1 Entonces
+		
+		Escribir  "El resultado de el vendedor 4 menos el vendedor 1:", val_4 - val_1
+	FinSi
+	si  val_2 <> val_1 Entonces
+		
+		Escribir  "El resultado de el vendedor 2 menos el vendedor 1: ", val_2 - val_1
+		
+	FinSi
+	si  val_4<> val_3 Entonces
+		
+		Escribir  "El resultado de el vendedor 4 menos el vendedor 3: ", val_4 - val_3
+		
+	FinSi
+	si  val_3 <> val_2 Entonces
+		
+		Mostrar "El resultado de el vendedor 3 menos el vendedor 2: ", val_3 - val_2
+		
+	FinSi
+	escribir"La suma de todas las ventas es:",val_1+val_2+val_3+val_4 
+	
+	escribir"el promedio general es: ",val_1 + val_2 + val_3 + val_4 /4
+FinAlgoritmo
+
