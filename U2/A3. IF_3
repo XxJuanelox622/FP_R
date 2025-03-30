@@ -1,0 +1,34 @@
+El banco donde trabaja la Lic. Petra, ahora tiene un nuevo sistema para revisar el historial, y permite identificar más rápidamente los datos para un prospecto a crédito.
+
+En el nuevo sistema, ahora solo hay que ingresar la edad del prospecto, sus años trabajados y su ingreso actual y ahora el algoritmo trabajará de la siguiente manera.
+
+Si la edad es mayor a 18, los años mayor a 5 y el ingreso mayor a $5,000.00, deberá mostrar un mensaje que es su crédito será en el rango de los $10,000 a $15,000.
+
+Por otro lado, si la edad es mayor a 35, los años mayor a 10 años y el ingreso mayor a $10,000, deberá mostrar un mensaje que el rango del crédito será de los $25,000 a los $30,000.
+
+Si la edad es mayor a 60, los años mayor a 20 y el ingreso mayor a $20,000, deberá mostrar un mensaje que el rango de crédito será de los $50,000 a los $100,000.
+
+Si alguno de los rangos de edad, años de trabajo o ingreso no coincide, deberá simplemente mostrar un mensaje que necesita contactar a un asesor.
+
+
+Algoritmo Banco_2
+		Escribir "Ingrese es tu edad :"
+		Leer edad
+		Escribir "Ingrese la candidad de años que ha trabajado :"
+		Leer años_trabajados
+		Escribir "Ingrese sus ingresos mensuales :"
+		Leer ingreso
+		
+		si edad > 18 y años_trabajo > 5 y ingreso > 5000 Entonces
+			credito = "tu credito es de $10,000 a $15,000"
+			si edad > 35 y años_trabajo > 10 y ingreso > 10000 Entonces
+				credito = "tu credito es de $25,000 a $30,000"
+			FinSi
+			si edad > 60 y años_trabajo > 20 y ingreso > 20000 Entonces
+				credito = "tu credito es de $50,000 a $100,000"
+			FinSi
+		SiNo
+			Escribir "necesita contactar con a un asesor"
+		FinSi
+		Escribir  credito
+FinAlgoritmo
