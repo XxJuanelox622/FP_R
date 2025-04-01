@@ -1,0 +1,35 @@
+
+SubProceso Salariobruto(H_tra, ta_hora, sal_Bruto Por Referencia, des_impuestos, des_Seg_Social, sal_Neto)
+	sal_Bruto = H_tra * ta_hora
+	Escribir "Salario bruto:",sal_Bruto
+FinSubProceso
+
+SubProceso desimpuesto(H_tra, ta_hora, sal_Bruto, des_impuestos Por Referencia, des_Seg_Social, sal_Neto)
+    des_impuestos = sal_Bruto * 0.15
+	Escribir "Descuento de Impuestos (15%)", " ", ":", " ",des_impuestos
+FinSubProceso
+
+SubProceso dessegsocial(H_tra, ta_hora, sal_Bruto, des_impuestos, des_Seg_Social Por Referencia, sal_Neto)
+    des_Seg_Social = sal_Bruto * 0.10
+	Escribir "Descuento de Seguridad Social (10%)", " ", ":", " ",es_Seg_Social
+FinSubProceso
+
+SubProceso salnet(H_tra, ta_hora, sal_Bruto, des_impuestos, des_Seg_Social, sal_Neto Por Referencia)
+    sal_Neto = sal_Bruto - des_impuestos - des_Seg_Social
+	Escribir "Salario Neto:", " ", ":", " ",sal_Neto
+FinSubProceso
+
+Algoritmo Salario_trabajadores_1
+	Definir H_tra, ta_hora, sal_Bruto, des_impuestos, des_Seg_Social, sal_Neto Como Real
+	
+	Escribir "Ingrese el número de horas trabajadas", " ", ":"," "
+	Leer H_tra
+	Escribir "Ingrese la tarifa por hora", " ", ":"," "
+	Leer ta_hora
+	
+	Salariobruto(H_tra, ta_hora, sal_Bruto, des_impuestos, des_Seg_Social, sal_Neto)
+	desimpuesto(H_tra, ta_hora, sal_Bruto, des_impuestos, des_Seg_Social, sal_Neto)
+	dessegsocial(H_tra, ta_hora, sal_Bruto, des_impuestos, des_Seg_Social, sal_Neto)
+	salnet(H_tra, ta_hora, sal_Bruto, des_impuestos, des_Seg_Social, sal_Neto)
+	
+FinAlgoritmo
